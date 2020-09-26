@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./src/generateREADME');
+const { setTimeout } = require('timers');
 
 
 //Prompt to ask user questions about their ReadMe
@@ -61,13 +62,36 @@ const promptReadMe = readMeData => {
           },
           {
               type: 'input',
-              name: 'instructions',
+              name: 'installation',
               message: 'Enter any installation instructions. (Required)',
-              validate: instrucInput => {
-                  if (instrucInput) {
+              validate: installation => {
+                  if (installation) {
                       return true;
                   } else {
                       console.log('Please enter the proper installation instructions for this project!');
+                      return false;
+                  }
+              }
+          },
+          {
+              type: 'input',
+              name:
+          },
+          {
+              type: "checkbox",
+              name: "license",
+              message: "What project license (if any) did you use?",
+              choices: ["MIT", "GNU LGPLv3", "mpl 2.0", "Apache License 2.0", "Boost Software License", "Unlicense", "ISC",]
+          },
+          {
+              type: 'input',
+              name: 'contact_email',
+              message: 'Please enter your contact email:',
+              validate: contactEmail => {
+                  if (contactEmail) {
+                      return true;
+                  } else {
+                      console.log('Please enter your email address!');
                       return false;
                   }
               }
@@ -81,7 +105,7 @@ promptReadMe()
 
     fs.writeFile('./dist/README.md', readMe, err => {
         if (err) throw err;
-
-        console.log('ReadMe created! Checkout README.md to see the output!')
+        console.log('Generating file....');
+        setTimeout(() => {  console.log("ReadMe created! Checkout README.md in the dist folder to see the output!"); }, 2000);
     });
 });
