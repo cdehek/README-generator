@@ -10,9 +10,9 @@ const promptReadMe = readMeData => {
     //   readMeData.projects = [];
     // }
       console.log(`
-  ===============
-  Add a New Project README.md
-  ===============
+|================================|
+|  Let's create your README! :D  |
+|================================|
       `);
       return inquirer.prompt([
           {
@@ -75,13 +75,35 @@ const promptReadMe = readMeData => {
           },
           {
               type: 'input',
-              name:
+              name: 'usage',
+              message: 'What is your app used for?(Required)',
+              validate: usage => {
+                if (usage) {
+                    return true;
+                } else {
+                    console.log('Please explain what your app is used for.');
+                    return false;
+                }
+            }
+          },
+          {
+              type: 'input',
+              name: 'contribute',
+              message: 'Who contributed to this project?',
+              validate: contribute => {
+                  if (contribute) {
+                      return true;
+                  } else {
+                      console.log('Please enter the names of the contributors to this project.');
+                      return false;
+                  }
+              }
           },
           {
               type: "checkbox",
               name: "license",
               message: "What project license (if any) did you use?",
-              choices: ["MIT", "GNU LGPLv3", "mpl 2.0", "Apache License 2.0", "Boost Software License", "Unlicense", "ISC",]
+              choices: ["MIT", "GNU LGPLv3", "mpl 2.0", "Apache License 2.0", "Boost Software License", "Unlicense", "ISC", "<none>"]
           },
           {
               type: 'input',

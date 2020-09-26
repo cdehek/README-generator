@@ -1,6 +1,7 @@
 function generateMarkdown(readMeData) {
     return `
   # ${readMeData.title}
+  # Created By:${readMeData.username}
   <img src="https://img.shields.io/badge/${readMeData.label}-${readMeData.message}-${readMeData.color}" alt="${readMeData.label}" />
   ## ${readMeData.description}
   ---
@@ -20,14 +21,17 @@ function generateMarkdown(readMeData) {
   ## Usage
   ${readMeData.usage}
   ---
-  ## Contribute
+  ## Contributors
   ${readMeData.contribute}
   ---
   ## Tests
   ${readMeData.tests}
   ---
+  ## Languages
+  ${readMeData.languages}
+  ---
   ## License
-  This projet is licensed under the terms of ${readMeData.license} license.
+  This project is licensed under the terms of ${readMeData.license} license.
   ---
   ## Questions
   If you have any questions about this repo,
