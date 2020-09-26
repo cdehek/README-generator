@@ -6,9 +6,6 @@ const { setTimeout } = require('timers');
 
 //Prompt to ask user questions about their ReadMe
 const promptReadMe = readMeData => {
-    // if (!readMeData.projects) {
-    //   readMeData.projects = [];
-    // }
       console.log(`
 |================================|
 |  Let's create your README! :D  |
@@ -58,7 +55,7 @@ const promptReadMe = readMeData => {
               type: 'checkbox',
               name: 'languages',
               message: 'What did you build this project with? (Check all that apply)',
-              choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Boostrap', 'Node']
+              choices: [' Javascript ', ' HTML ', ' CSS ', ' ES6 ', ' jQuery ', ' Boostrap ', ' Node ']
           },
           {
               type: 'input',

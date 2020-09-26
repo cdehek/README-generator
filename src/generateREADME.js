@@ -3,8 +3,9 @@ function generateMarkdown(readMeData) {
   # ${readMeData.title}
   # Created By:${readMeData.username}
   <img src="https://img.shields.io/badge/${readMeData.label}-${readMeData.message}-${readMeData.color}" alt="${readMeData.label}" />
-  ## ${readMeData.description}
-  ---
+
+  ### ${readMeData.description}
+
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -16,19 +17,20 @@ function generateMarkdown(readMeData) {
   ---
   ## Installation
   ​
-  ${readMeData.installation}
+  ### ${readMeData.installation}
   ---
   ## Usage
-  ${readMeData.usage}
+  ### ${readMeData.usage}
   ---
   ## Contributors
-  ${readMeData.contribute}
+  ### ${readMeData.contribute}
   ---
   ## Tests
-  ${readMeData.tests}
+  ### ${readMeData.tests}
   ---
   ## Languages
-  ${readMeData.languages}
+  ### ${readMeData.languages}
+
   ---
   ## License
   This project is licensed under the terms of ${readMeData.license} license.
@@ -37,6 +39,6 @@ function generateMarkdown(readMeData) {
   If you have any questions about this repo,
   open an issue or contact ${readMeData.contact_email}
   `;
-  }
+}
   
   module.exports = generateMarkdown;
