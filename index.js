@@ -97,6 +97,19 @@ const promptReadMe = readMeData => {
               }
           },
           {
+              type: 'input',
+              name: 'tests',
+              message: 'What are the test instructions?',
+              validate: tests => {
+                  if (tests) {
+                      return true;
+                    } else {
+                        console.log('Please list the apps test instructions!');
+                        return false;
+                    }
+                }
+            },
+          {
               type: "checkbox",
               name: "license",
               message: "What project license (if any) did you use?",

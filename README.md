@@ -1,33 +1,41 @@
+# README Generator
 
-  # undefined
-  <img src="https://img.shields.io/badge/undefined-undefined-undefined" alt="undefined" />
-  ## asdf
-  ---
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribute](#contribute)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  - [License](#license)
-  ---
-  ## Installation
-  ​
-  undefined
-  ---
-  ## Usage
-  undefined
-  ---
-  ## Contribute
-  undefined
-  ---
-  ## License
-  This projet is licensed under the terms of undefined license.
-  ---
-  ## Tests
-  undefined
-  ---
-  ## Questions
-  If you have any questions about this repo,
-  open an issue or contact undefined
-  
+This is a simple ReadMe generator that can be used with any project.
+
+## Getting Started
+
+To get started, simply clone this GitHub repository, or download the repo.
+
+### Prerequisites
+
+After downloading/cloning the repo be sure to install the following:
+
+```
+Node.js
+Inquirer
+```
+
+### Installing/Using
+```
+Once you have the necessary files, to get started simply run the index.js file and answer the prompt questions!
+```
+
+
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+* [Node.js](https://nodejs.org/en/)
+* [Inquirer](https://www.npmjs.com/package/inquirer)
+
+## Authors
+
+* **Christian Dehek** - *Initial work* - [cdehek](https://github.com/cdehek)
+
+See also the list of [contributors](https://github.com/cdehek/README-generator/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License.

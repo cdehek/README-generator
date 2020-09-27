@@ -1,8 +1,8 @@
 function generateMarkdown(readMeData) {
     return `
   # ${readMeData.title}
-  # Created By:${readMeData.username}
-  <img src="https://img.shields.io/badge/${readMeData.label}-${readMeData.message}-${readMeData.color}" alt="${readMeData.label}" />
+  # Created By: ${readMeData.username}
+  <img src="https://img.shields.io/badge/license-${readMeData.license}-green" alt="license" />
 
   ### ${readMeData.description}
 
